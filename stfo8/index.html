@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Trade Value Game</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top navigation bar -->
+  <nav>
+    <!-- When clicked, goes to the “glowy” page -->
+    <a id="gameLink" href="game.html">Game Link</a>
+  </nav>
+
+  <!-- Main container for the trade interface -->
+  <div class="trade-container">
+    <!-- YOU side -->
+    <div class="side" id="youSide">
+      <h2>YOU</h2>
+      <div class="slots">
+        <div class="slot">
+          <button class="add-button" onclick="openImageSelector('you', 0)">+</button>
+        </div>
+        <div class="slot">
+          <button class="add-button" onclick="openImageSelector('you', 1)">+</button>
+        </div>
+        <div class="slot">
+          <button class="add-button" onclick="openImageSelector('you', 2)">+</button>
+        </div>
+        <div class="slot">
+          <button class="add-button" onclick="openImageSelector('you', 3)">+</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- THEM side -->
+    <div class="side" id="themSide">
+      <h2>THEM</h2>
+      <div class="slots">
+        <div class="slot">
+          <button class="add-button" onclick="openImageSelector('them', 0)">+</button>
+        </div>
+        <div class="slot">
+          <button class="add-button" onclick="openImageSelector('them', 1)">+</button>
+        </div>
+        <div class="slot">
+          <button class="add-button" onclick="openImageSelector('them', 2)">+</button>
+        </div>
+        <div class="slot">
+          <button class="add-button" onclick="openImageSelector('them', 3)">+</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Result bar -->
+  <div id="resultBar" class="result-bar">FAIR</div>
+
+  <!-- Hidden popup for selecting images -->
+  <div id="imageSelector" class="image-selector">
+    <div class="image-options">
+      <!-- Each image has an onclick that passes the file name and a numeric value -->
+      <img src="images/img1.png" alt="Image 1" onclick="selectImage('img1.png', 10)" />
+      <img src="images/img2.png" alt="Image 2" onclick="selectImage('img2.png', 20)" />
+      <img src="images/img3.png" alt="Image 3" onclick="selectImage('img3.png', 30)" />
+      <img src="images/img4.png" alt="Image 4" onclick="selectImage('img4.png', 40)" />
+    </div>
+  </div>
+
+  <!-- Link to external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>

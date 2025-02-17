@@ -1,0 +1,162 @@
+/* Apply a background image to the entire page */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #fff;
+  background: url("https://cdn.discordapp.com/attachments/1316307755048374294/1339987844898361494/noFilter.png?ex=67b4aced&is=67b35b6d&hm=52e93d7ac5c9d38dbd15106bb87070f73e073fdc3011cbe8a8ebefeae88adfdd&")
+    no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Navigation bar at top */
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  text-align: center;
+}
+
+/* "Game Link" in nav bar */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  text-shadow: 0 0 5px #0ff;
+  margin: 0 10px;
+}
+
+nav a:hover {
+  text-shadow: 0 0 10px #0ff;
+}
+
+/* Container that holds the YOU and THEM columns */
+.trade-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+/* Each side’s container */
+.side {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px #0ff;
+  width: 300px;
+}
+
+/* Titles for each side */
+.side h2 {
+  margin: 0 0 10px;
+  text-shadow: 0 0 5px #0ff;
+}
+
+/* Container for the 4 slots */
+.slots {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Each slot for the items */
+.slot {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* If a slot has an image, fill it */
+.slot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The “+” button styling */
+.add-button {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px dashed #fff;
+  color: #fff;
+  font-size: 1.5em;
+  cursor: pointer;
+  text-shadow: 0 0 5px #0ff;
+}
+.add-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* The result bar at the bottom: shows WIN, LOSE, or FAIR */
+.result-bar {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 2em;
+  text-shadow: 0 0 5px #0ff;
+}
+
+/* Popup container for the image selector */
+.image-selector {
+  display: none; /* Hidden by default; we show it via JS */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 999;
+}
+
+/* Layout of the images in the selector */
+.image-selector .image-options {
+  display: flex;
+  gap: 10px;
+}
+
+/* Each image in the selector */
+.image-selector .image-options img {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  border: 2px solid #fff;
+}
+
+.image-selector .image-options img:hover {
+  border-color: #0ff;
+  box-shadow: 0 0 10px #0ff;
+}
+
+/* Glowy page container (game.html) */
+.glowy-page {
+  text-align: center;
+  margin-top: 100px;
+  color: #fff;
+  text-shadow: 0 0 5px #0ff;
+}
+
+/* Back button styling */
+.back-button,
+.roblox-link {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  box-shadow: 0 0 10px #0ff;
+  margin: 10px;
+}
+.back-button:hover,
+.roblox-link:hover {
+  box-shadow: 0 0 20px #0ff;
+}
